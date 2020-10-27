@@ -1,6 +1,6 @@
 <!DOCTYPE html>
-<!--	Author: Mike O'Kane
-		Date:	August, 2017
+<!--	Author: Elijah Hume
+		Date:	10/26/2020
 		File:	modify3.php
 		Purpose: Chapter 15 Exercise
 		
@@ -32,7 +32,7 @@
 
 	$emp1->findEmployee($id);
 
-	print ("<p>Weekly Pay for ".$emp1->getFirstName()." ". $emp1->getLastName().": $".$emp1->getWeeklyPay()."</p>");
+	print ("<p>Weekly Pay for ".$emp1->getFirstName()." ". $emp1->getLastName().": $".$emp1->getAnnualPay()."</p>");
 ?>
 </body>
 </html>

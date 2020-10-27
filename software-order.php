@@ -1,6 +1,6 @@
 <!DOCTYPE html>
-<!--	Author: 
-		Date:	
+<!--	Author: Elijah Hume
+		Date:	10/26/2020
 		File:	software-order.php
 		Purpose: OOP Exercise
 -->
@@ -15,11 +15,22 @@
 	<h1>Software Order</h1>
 <?php
 
-	// your code here
+	$itemCost = $_POST['cost'];
+	$numItems = $_POST['items'];
+	
+	
 
-	
-	
-	// you can change the variables in the table if you need to use different names
+	include("inc-order-object.php");
+	$order = new order();
+
+	$order->setItemCost($itemCost);
+	$order->setNumItems($numItems);
+
+	$subTotal = $order->getSubtotal();
+	$tax = $order->getSalesTax();
+	$shippingHandling = $order->getShippingHandling();
+	$total = $order->getTotal();
+
 	print("	<table>
 			<tr><td>Sub-Total:</td><td>$subTotal</td></tr>
 			<tr><td>Tax:</td><td>$tax</td></tr>

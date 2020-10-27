@@ -1,6 +1,6 @@
 <!DOCTYPE html>
-<!--Author:
-	Date:
+<!--Author:	  ELijah Hume
+	Date:	  10/26/2020
 	File:	  fixit5.php
 	Purpose:  What's wrong here? The code creates an Employee 
 			  instance, then sets the employee attributes 
@@ -24,10 +24,10 @@
 
 	$emp1 = new Employee();
 
-	$emp1->getID("123456");
-	$emp1->getFirstName("Alan");
-	$emp1->getLastName("Turing");
-	$emp1->getHourlyWage(15.25);
+	$emp1->setID("123456");
+	$emp1->setFirstName("Alan");
+	$emp1->setLastName("Turing");
+	$emp1->setHourlyWage(15.25);
 	print("<table>
 			<tr><td>ID</td><td>".$emp1->getID()."</td></tr>
 			<tr><td>First Name</td><td>".$emp1->getFirstName()."</td></tr>

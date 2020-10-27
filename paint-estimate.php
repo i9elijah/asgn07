@@ -1,6 +1,6 @@
 <!DOCTYPE html>
-<!--	Author: 
-		Date:	
+<!--	Author: Elijah Hume
+		Date:	10/26/2020
 		File:	paint-estimate.php
 		Purpose: OOP Exercise
 -->
@@ -15,11 +15,22 @@
 	<h1>Paint Estimate</h1>
 <?php
 
-	// your code here
+	include ('inc-rectangle-object.php');
+	$length = $_POST['length'];
+	$width = $_POST['width'];
+	$height = $_POST['height'];
+
+	$longWall = new Rectangle();
+	$shortWall = new Rectangle();
 	
-	
+	$longWall->setX($height);
+	$longWall->setY($length);
+	$shortWall->setX($height);
+	$shortWall->setY($width);
+
+	$totalArea = (2 * $longWall->getArea()) + ( 2 * $shortWall->getArea() );
 	
 	print("The total area is $totalArea square feet.");
-?>
+	?>
 </body>
 </html>

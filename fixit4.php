@@ -1,6 +1,6 @@
 <!DOCTYPE html>
-<!--Author:
-	Date:
+<!--Author:   Elijah Hume
+	Date:     10/26/2020
 	File:	  fixit4.php
 	Purpose:  What's wrong here? The code creates an Employee 
 			  instance, then sets all the employee attributes 
@@ -23,10 +23,9 @@
 	include("inc-employee-object.php");
 
 	$emp1 = new Employee();
-
+	$emp1->setHourlyWage(15.25);
 	$emp1->setID("123456");
 	print ("<p>The weekly pay for employee #".$emp1->getID()." is $".$emp1->getWeeklyPay(40)."</p>");
-	$emp1->setHourlyWage(15.25);
 	?>
 </body>
 </html>

@@ -1,6 +1,6 @@
 <!DOCTYPE html>
-<!--Author:
-	Date:
+<!--Author:   Elijah Hume
+	Date:     10/26/2020
 	File:	  fixit3.php
 	Purpose:  What's wrong here? The code creates an Employee instance.
 			  then sets the ID and prints the ID.
@@ -22,7 +22,7 @@
 
 	$emp1 = new Employee();
 
-	$emp1 = setID("123456");
+	$emp1->setID("123456");
 
 	print ("<p>The employee's ID is ".$emp1->getID()."</p>");
 	?>

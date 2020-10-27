@@ -21,9 +21,9 @@ class Employee
 
 	public function findEmployee($id)
 	{
-		$empFile = fopen("employees.txt", "r");
+			$empFile = fopen("employees.txt", "r");
 		$empRecord = fgets($empFile);
-		$notFound = true;
+		$notFound = true;  // flag or seed
 		while (!feof($empFile) and $notFound)
 		{
 			list ($empID, $fName, $lName, $title, $wage) = explode(",", $empRecord);
@@ -38,8 +38,13 @@ class Employee
 			}
 			$empRecord = fgets($empFile);
 		}
+		
+		if($notFound == true)
+			return 0;
+		else 
+			return 1;
+				
 		fclose($empFile);
-
 	}
 
 	public function getID()
@@ -94,7 +99,12 @@ class Employee
 	
 	public function getWeeklyPay()
 	{
-		return number_format ($this->hourlyWage * 40, 2);
+		return number_format((float)$this->hourlyWage * 40, 2);
+	}
+
+	public function getAnnualPay()
+	{
+		return number_format((float)$this->hourlyWage * 40 * 52);
 	}
 	
 } // end of class definition
